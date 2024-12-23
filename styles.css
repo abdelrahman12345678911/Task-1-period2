@@ -1,0 +1,185 @@
+/*styling the body of  the list page*/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-image: url('task2 images/to-do list background 1.jpeg');*/
+    background-size: cover;
+    background-position: center;
+    background-color: darkkhaki;
+    gap: 40px;
+}
+/*styling the header of the list page*/
+header {
+    background-color: rgba(33, 33, 33, 0.8);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*styling the input text bar in the header of the list page*/
+header input[type="text"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    width: 70%;
+    margin-right: 1rem;
+
+}
+/*styling the add task button in the header of the list page*/
+header button {
+    background-color: rgb(22, 207, 22);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+/*change color when hover on the specfic components of the list page*/
+.header-btn:hover{
+    background-color: lime;
+}
+
+.label:hover{
+    background-color: blue;
+}
+/*styling the main of the list page by usin flex layouts*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+/*styling the list  of added  tasks of the webpage*/
+#task-list {
+    list-style: none;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/*styling each  single added  task */
+.task {
+    background-color: #c7c5c5;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+/*styling when pressing  on  complete button at each task*/
+.task.completed {
+    background-color: #4bf608;
+    text-decoration: line-through;
+}
+/* styling the tasks buttons in the list page*/
+.task button {
+    background-color: aqua;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+/*styling when hovering on  task buttons*/
+.task button:hover{
+    background-color: #fff;
+}
+/*styling when add notifications on the list page*/
+.notification {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    animation: fadeIn 0.5s;
+    
+}
+/*styling for making animations*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    header input[type="text"] {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    header button {
+        width: 100%;
+    }
+    main {
+        padding: 1rem;
+    }
+    #task-list {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        gap: 10px;
+    }
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .task button {
+        margin-top: 0.25rem;
+        margin-left: 0;
+    }
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    header input[type="text"] {
+        width: 50%;
+        margin-right: 1rem;
+    }
+    header button {
+        width: auto;
+    }
+    main {
+        padding: 2rem;
+    }
+}
+
+/* Desktop (min-width: 1280px) */
+@media (min-width: 1280px) {
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    #task-list {
+        padding: 2rem; 
+        margin-bottom: 2rem;
+        gap: 20px;
+    }
+}

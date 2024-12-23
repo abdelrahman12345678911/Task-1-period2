@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Creating  To-Do List using Html5 , CSS3 and Javascript ES6+-->
+
+<!--create head of  the  webpage including title,logo image and make external CSS3 file for styling -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Website</title>
+    <link rel="icon" type="image/png" href="task2 images/to-do list background.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--creating  the body of the webpage including header (h1,input text,button)
+label ,  main that contains the tasks  list  of the webpage that will add
+dynamically by  adding  a  new  task -->
+
+<body style="background-color: orange;border: 1px solid black;color: rgb(21, 0, 255);
+border-right: 0px;border-left: 0px;">
+    <header style="grid-row: 40px;" >
+        <h1 style="background-color: aqua;width:250px;">To-Do List Form</h1><br>
+        <input type="text" id="task-input" placeholder="Enter your new Task"
+        style="width: 350px;height: 30px;border-radius: 30px;background-color: rgb(53, 240, 218);
+        font-size: 20px;">
+        <button class="header-btn" id="add-task-btn" style="width: 200px;height: 58px;
+        border-radius: 30px;cursor: pointer;
+        font-size: 20px;">Add Task</button><br><br><br>   
+    </header>
+    <label class="label" style="color: #fff;font-size: 30px;background-color: aqua;width:250px;
+    font-weight: bold;  cursor: pointer;text-align: center;margin-left: 560px;" >&#x1F44B; Hello! Your To-Do Tasks :</label>
+    <main style="padding: 0px;color: rgb(59, 66, 71);" >
+        <ul style="padding: 20px;" id="task-list"></ul>
+    </main>
+
+    <!--adding a javascript ES6+ script for  adding the functionality of the tasks list-->
+
+    <script src="script.js"></script>
+</body>
+</html>
